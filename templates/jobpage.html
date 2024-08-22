@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {%include 'bootstrap.html'%}
+    <title>
+      Apply for {{job['Title']}}
+    </title>
+  </head>
+  <body>
+    {%include 'navbar.html'%}
+  <div class="container">
+    <div class="mt-4 mb-4;">
+    <h2>{{job['Title']}}</h2>
+    </div>
+
+    <div class="lead">
+    <p><b>Location:</b> {{job['Location']}}</p>
+    </div>
+
+    <div class="lead">
+    <p><b>Responsibilities:</b> {{job['RESPONSIBILITIES']}}</p>
+    </div>
+
+    <div class="lead">
+      <p><b>Requirements:</b> {{job['REQUIREMENTS']}}</p>
+      </div>
+
+    <div class="lead">
+      <p><b>Salary: </b>{{job['Currency']}}.{{job['Salary']}}</p>
+      </div>
+  </div>
+
+    <div class="lead">
+      {%include 'application_form.html'%}
+    </div>
+
+    
+    {%include 'footer.html'%}
+  </body>
+</html>

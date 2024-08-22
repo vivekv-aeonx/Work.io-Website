@@ -1,0 +1,17 @@
+<div class="border-bottom row">
+  <div class="col-10">
+  <h4 class="mt-2 mb-2" style="font-size: 20px;">
+    <div>{{ job['Title'] }}</div>
+  </h4>
+  <p class="lead mt-2 mb-2" style="font-size: 18px;">{{ job['Location'] }}</p>
+  {% if 'Salary' in job %}
+  <div>
+  <p class="lead mt-2 mb-2" style="font-size: 18px;">{{job['Currency']}}. {{ job['Salary'] }}</p>
+  </div>
+  {% endif %}
+  </div>
+  
+  <div class="col-2 mt-4 mb-4">
+  <a href="/jobs/{{job['ID']}}" type="button" class="btn btn-outline-primary">Apply</a>
+  </div>
+</div>

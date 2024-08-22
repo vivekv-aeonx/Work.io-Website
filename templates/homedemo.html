@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "bootstrap.html" %}
+    <title>Work.io</title>
+    <style>
+      #banner {
+          width: 100%;
+          height: 100%;
+          display: block;
+          margin: 0;
+          padding: 0;
+          object-fit: cover;
+      }
+      .section {
+          padding-top: 70px;
+          margin-top: -70px; 
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="70" tabindex="0">
+
+    <nav id="navbar-example2" class="navbar navbar-expand-lg bg-body-tertiary px-3 mb-6 sticky-top">
+      <div style="font-size:25px;"
+      <a class="navbar-brand" href="#">Work.io</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">Jobs</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id="scrollspyHeading1" style="position: absolute; top: 0; left: 0; width: 100%; height: 1px;"></div>
+
+
+    <img id="banner" class="img-fluid" src="static/skyline.jpg" alt="Banner">
+
+
+    <div class="container">
+      <div class="scrollspy-example p-3 rounded-2">
+
+        <div id="scrollspyHeading2" class="section">
+          <h2>About Us</h2>
+          <p class="lead">
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Integer blandit leo sollicitudin mus class dui vivamus senectus porta. Quam posuere torquent vulputate euismod sagittis. Laoreet finibus rutrum erat felis facilisi amet. Cras lacus parturient; faucibus curabitur eleifend adipiscing quam. Nullam cubilia quisque habitasse lorem inceptos primis tempor tristique. Etiam ut fermentum, habitant amet morbi imperdiet laoreet rutrum curae. Semper tortor blandit libero imperdiet mollis egestas luctus vestibulum. Quisque conubia volutpat placerat non bibendum dui. Sagittis habitasse tortor eleifend erat vestibulum potenti sagittis. Laoreet dictum mi; etiam dis tempor elementum pulvinar nostra nec. Praesent nullam lacinia commodo habitant eu. Lacinia maecenas nec taciti dictum vulputate nec.
+          </p>
+          <p class="lead">
+            Molestie posuere congue tortor ornare duis non. Taciti nec diam iaculis metus urna turpis neque finibus. Odio phasellus phasellus cubilia magna vel ultrices mi? Netus viverra pellentesque hac vivamus dis netus efficitur. Nostra laoreet inceptos vehicula penatibus aliquet malesuada. Posuere sapien placerat volutpat ultrices nec potenti rhoncus phasellus. Semper tortor blandit libero imperdiet mollis egestas luctus vestibulum. Quisque conubia volutpat placerat non bibendum dui. Sagittis habitasse tortor eleifend erat vestibulum potenti sagittis. Laoreet dictum mi; etiam dis tempor elementum pulvinar nostra nec. Praesent nullam lacinia commodo habitant eu. Lacinia maecenas nec taciti dictum vulputate nec. 
+          </p>
+        </div>
+
+
+        <div id="scrollspyHeading3" class="section">
+          <h2>Jobs</h2>
+          <p>
+            {% for job in jobs %}
+              {%include 'jobitem.html'%}
+            {% endfor %}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% include "footer.html" %}
+    <script>
+      var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbar-example2',
+        offset: 70 
+      });
+    </script>
+  </body>
+</html>
