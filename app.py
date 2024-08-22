@@ -1,5 +1,5 @@
-from flask import Flask, render_template, jsonify
-from database import engine, load_jobs_from_db, load_job_from_db
+from flask import Flask, render_template
+from db import engine, load_jobs_from_db, load_job_from_db
 
 
 app=Flask(__name__)
