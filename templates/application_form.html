@@ -10,22 +10,37 @@
       <div class="mt-4 mb-4">
         <h4>Application Form</h4>
 
-      <form>
+      <form action="/jobs/{{job['ID']}}/apply" method="post">
         <div style="font-size:18px;" class="mb-2">
-        <label>Full Name</label><br>
+        <label><b>Full Name</b></label><br>
         <input type="text" name="full_name"><br>
         </div>
 
         <div style="font-size:18px;" class="mb-2">
-        <label>Email ID</label><br>
-        <input type="text" name="full_name"><br>
+        <label><b>Email ID</b></label><br>
+        <input type="text" name="email"><br>
         </div>
 
         <div style="font-size:18px;" class="mb-2">
-        <label>LinkedIn URL</label><br>
-        <input type="text" name="full_name"><br>
+        <label><b>LinkedIn URL</b></label><br>
+        <input type="text" name="linkedin_url"><br>
         </div>
 
+        <div style="font-size:18px;" class="mb-2">
+          <label><b>Education</b></label><br>
+          <textarea name="education"></textarea>
+        </div>
+
+        <div style="font-size:18px;" class="mb-2">
+          <label><b>Work Experience</b></label><br>
+          <textarea name="work_experience"></textarea>
+        </div>
+
+        <div style="font-size:18px;" class="mb-2">
+          <label><b>Resume URL</b></label><br>
+          <input type="text" name="resume_url"><br>
+          </div>
+        
         <input type="submit">
       </form>
       </div>

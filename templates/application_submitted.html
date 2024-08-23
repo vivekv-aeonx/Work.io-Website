@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {%include 'bootstrap.html'%}
+    <title>
+      Application Submitted Successfully
+    </title>
+  </head>
+  <body>
+    {%include 'navbar.html'%}
+    <div class="container">
+    <div class="mt-4 mb-4" style="font-size:20px;">
+    <h2>Application submitted successfully!</h2>
+    </div>
+    <h5>Full Name</h5>
+    <p class="lead" style="font-size:16px;">{{application['full_name']}}</p>
+
+    <h5>email ID</h5>
+    <p class="lead" style="font-size:16px;">{{application['email']}}</p>
+
+    <h5>Linkedin URL</h5>
+    <p class="lead" style="font-size:16px;">{{application['linkedin_url']}}</p>
+
+    <h5>Education</h5>
+    <p class="lead" style="font-size:16px;">{{application['education']}}</p>
+
+    <h5>Work Experience</h5>
+    <p class="lead" style="font-size:16px;">{{application['work_experience']}}</p>
+
+    <h5>Resume URL</h5>
+    <p class="lead" style="font-size:16px;">{{application['resume_url']}}</p>
+    {%include 'footer.html'%}
+    </div>
+  </body>
+</html>
