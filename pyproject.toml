@@ -10,6 +10,10 @@ python = "^3.10"
 flask = "^3.0.3"
 sqlalchemy = "^2.0.32"
 consultor = "^0.2.0"
+pyjwt = "^2.9.0"
+flask-jwt-extended = "^4.6.0"
+werkzeug = "^3.0.4"
+flask-login = "^0.6.3"
 
 
 [build-system]
